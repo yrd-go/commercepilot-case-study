@@ -1,44 +1,38 @@
 # CommercePilot
 
-Independent, non-commercial portfolio case study for an AI-assisted commerce workflow.
+独立、非商业的电商 AI 作品集案例。
 
-**Live portfolio:** https://yrd-go.github.io/commercepilot-case-study/
+**在线作品集：** https://yrd-go.github.io/commercepilot-case-study/
 
-This repository contains the public portfolio, the recorded walkthrough, and a sanitized
-source-review copy of the application. It does not contain runtime data, product assets,
-databases, user records, credentials, environment files, logs, or private working files.
+**源码审阅说明：** [SOURCE.md](SOURCE.md)
 
-## Scope
+本仓库包含公开作品集、完整录屏，以及经过清理的源码审阅副本。仓库不包含运行数据、商品素材原文件、数据库、用户记录、账号凭据、环境变量文件、日志或本地工作文档。
 
-- Buyer storefront and administration UI walkthrough
-- AI listing generation with retrieval, compliance rules, and rendered assets
-- Advertising-week diagnosis, charts, and export formats
-- Run archive with model, duration, degradation, and artifact traceability
-- Source review copy in `src/`, `tests/`, `run.py`, and `requirements.txt`
+## 项目范围
 
-## Source layout
+- 买家端与后台界面完整演示
+- AI 商品主图、英文标题与卖点生成：检索、合规规则、图片渲染
+- 广告周报诊断、图表与多格式导出
+- 运行档案：模型、耗时、降级状态与产物追溯
+- 可审阅源码：`src/`、`tests/`、`run.py`、`requirements.txt`
 
-- `src/saviland/web/`: Starlette entry points, authentication boundary, API, and storefront UI
-- `src/saviland/domain/`: catalog, orders, inventory, and advertising calculations
-- `src/saviland/pipelines/`: listing generation, compliance rules, weekly diagnosis, and exports
-- `src/saviland/render/`: deterministic chart and hero-image rendering
-- `src/saviland/rag_bridge.py`: retrieval integration and source traceability
-- `tests/`: offline regression tests; some integration cases require local fixtures that are not public
+## 目录说明
 
-The source snapshot is provided for code review. It is not a turnkey deployment package:
-the private catalog fixtures, product assets, and model credentials are intentionally
-omitted. Set `SAVILAND_BASE_AGENT` and model keys only in your own local environment.
+- `src/saviland/web/`：Starlette 入口、登录边界、API 与买家端页面
+- `src/saviland/domain/`：商品、订单、库存与广告业务计算
+- `src/saviland/pipelines/`：商品内容生成、合规校验、周报诊断与导出
+- `src/saviland/render/`：图表与主图的确定性渲染
+- `src/saviland/rag_bridge.py`：知识检索接入与来源追溯
+- `tests/`：离线回归测试；部分集成用例依赖未公开的本地数据
 
-See [SOURCE.md](SOURCE.md) for the architecture and review path.
+这是用于代码审阅的源码快照，不是开箱即用的部署包。私有目录数据、商品素材和模型凭据均已移除；运行前请在自己的环境中配置 `SAVILAND_BASE_AGENT` 和模型密钥。
 
-Orders and advertising figures are structurally realistic simulated data. Product imagery
-is used only for non-commercial portfolio display. No customer, account, or credential
-records are included.
+## 数据边界
 
-## Disclaimer
+订单与广告金额是结构对齐的仿真数据。商品图仅用于非商业作品展示。仓库不包含客户、账号或凭据记录。
 
-This is an independent project. It is not affiliated with, endorsed by, or sponsored by
-Saviland. Saviland and related trademarks belong to their respective owners. All product
-imagery is used solely for illustrative, non-commercial portfolio purposes.
+## 免责声明
 
-Copyright (c) 2026. Portfolio presentation only.
+本项目为独立作品，与 Saviland 不存在隶属、合作或背书关系。Saviland 名称及相关商标归其权利人所有。所有商品图仅用于说明性的非商业作品展示。
+
+版权所有 (c) 2026，仅用于作品集展示。
