@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Saviland · 电商运营台</title>
+<link rel="stylesheet" href="/static/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%238E2F4F'/><text x='50' y='68' font-size='56' font-family='Segoe UI,sans-serif' font-weight='700' fill='%23fff' text-anchor='middle'>S</text></svg>">
+</head>
+<body>
+
+<!-- 图标精灵：全部手绘 stroke 路径，不依赖任何外部字体/图标库（离线可用） -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-grid" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/>
+      <rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/>
+    </symbol>
+    <symbol id="i-box" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 8.4v7.2a2 2 0 0 1-1 1.7l-7 4a2 2 0 0 1-2 0l-7-4a2 2 0 0 1-1-1.7V8.4a2 2 0 0 1 1-1.7l7-4a2 2 0 0 1 2 0l7 4a2 2 0 0 1 1 1.7Z"/>
+      <path d="m3.3 7.3 8.7 5 8.7-5"/><path d="M12 21v-8.7"/>
+    </symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 13 9 5 9-5"/><path d="m3 17.5 9 5 9-5"/>
+    </symbol>
+    <symbol id="i-receipt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 3h14a1 1 0 0 1 1 1v17l-3-2-3 2-3-2-3 2-3-2V4a1 1 0 0 1 1-1Z"/>
+      <path d="M8 8h8M8 12h8M8 16h4"/>
+    </symbol>
+    <symbol id="i-megaphone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m3 11 15-6v13L3 13v-2Z"/><path d="M6 12v6a2 2 0 0 0 3.5 1.3L11 17"/>
+      <path d="M20 9.5a3 3 0 0 1 0 5"/>
+    </symbol>
+    <symbol id="i-sparkles" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 3.5 13.7 8l4.5 1.7-4.5 1.7L12 16l-1.7-4.6L5.8 9.7 10.3 8 12 3.5Z"/>
+      <path d="M18.5 15.5 19.4 18l2.5.9-2.5.9-.9 2.5-.9-2.5-2.5-.9 2.5-.9.9-2.5Z"/>
+    </symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3 20h18"/><path d="M6 20V11M11 20V5M16 20v-6M21 20V8"/>
+    </symbol>
+    <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 4.5 4.5"/>
+    </symbol>
+    <symbol id="i-archive" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="4" width="18" height="4" rx="1"/><path d="M5 8v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8"/>
+      <path d="M10 12h4"/>
+    </symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/>
+    </symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5Z"/>
+    </symbol>
+    <symbol id="i-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M14 4h6v6"/><path d="M20 4 11 13"/><path d="M19 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5"/>
+    </symbol>
+    <symbol id="i-logout" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M10 4H6a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h4"/><path d="M16 8l4 4-4 4"/><path d="M20 12H9"/>
+    </symbol>
+    <symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M4 20h16"/>
+    </symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M20 11a8 8 0 1 0-.9 4.5"/><path d="M20 4v7h-7"/>
+    </symbol>
+    <symbol id="i-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13l11-6.5-11-6.5Z"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+      <path d="m6 6 12 12M18 6 6 18"/>
+    </symbol>
+    <symbol id="i-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M14 4h6v6"/><path d="M20 4 11 13"/><path d="M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/>
+    </symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m4 12.5 5 5L20 6.5"/>
+    </symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 3.5 22 20H2L12 3.5Z"/><path d="M12 9.5v4.5"/><circle cx="12" cy="17" r=".9" fill="currentColor" stroke="none"/>
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 12h14"/><path d="m13 6 6 6-6 6"/>
+    </symbol>
+  </defs>
+</svg>
+
+<aside class="sidebar">
+  <div class="brand">
+    <div class="brand-mark">Savi<span>land</span></div>
+    <div class="brand-sub">电商运营台 · 内容与投放自动化</div>
+  </div>
+  <nav id="nav"></nav>
+  <div class="sidebar-foot">
+    <div class="fact-grid" id="facts"></div>
+    <!-- 买家端是独立的应用（服务端渲染的多页），所以这里只是"另开一个窗口去看看"，
+         不是后台里的一个页面。前台永远不会链回这里。 -->
+    <a class="sidebar-link" href="/shop" target="_blank" rel="noopener">
+      <svg width="14" height="14"><use href="#i-external"/></svg>
+      买家端商城（/shop）
+    </a>
+    <a class="sidebar-link" href="/logout">
+      <svg width="14" height="14"><use href="#i-logout"/></svg>
+      退出登录
+    </a>
+    <button class="theme-toggle" id="themeBtn" type="button">
+      <span id="themeLabel">切换深色</span>
+      <svg id="themeIcon" width="15" height="15"><use href="#i-moon"/></svg>
+    </button>
+  </div>
+</aside>
+
+<main class="main">
+  <header class="topbar">
+    <div>
+      <h1 id="pageTitle">运营概览</h1>
+      <div class="sub" id="pageSub">加载中…</div>
+    </div>
+    <div class="topbar-actions" id="pageActions"></div>
+  </header>
+  <div class="content" id="view">
+    <div class="grid c4" id="bootSkeletons">
+      <div class="skeleton" style="height:104px"></div>
+      <div class="skeleton" style="height:104px"></div>
+      <div class="skeleton" style="height:104px"></div>
+      <div class="skeleton" style="height:104px"></div>
+    </div>
+  </div>
+</main>
+
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" id="lbClose" type="button" aria-label="关闭">×</button>
+  <img id="lbImg" alt="">
+  <div class="lb-cap" id="lbCap"></div>
+</div>
+
+<div class="drawer-mask" id="drawerMask"></div>
+<aside class="drawer" id="drawer">
+  <div class="drawer-head">
+    <div>
+      <div class="card-title" id="drawerTitle">详情</div>
+      <div class="card-note" id="drawerSub"></div>
+    </div>
+    <button class="btn btn-ghost" id="drawerClose" type="button" aria-label="关闭">
+      <svg width="16" height="16"><use href="#i-close"/></svg>
+    </button>
+  </div>
+  <div class="drawer-body" id="drawerBody"></div>
+</aside>
+
+<div class="toast-wrap" id="toasts"></div>
+
+<script>
+/* 前端自身的错误必须"看得见"：否则页面会安静地卡在骨架屏上，
+   而使用者（和我自己）只会以为"后端没响应"。这里把所有未捕获错误
+   变成一个显眼的红色浮层，并把原文留在页面上方便定位。 */
+window.addEventListener('error', function (e) {
+  try {
+    var box = document.getElementById('jsErrBox') || (function () {
+      var d = document.createElement('div');
+      d.id = 'jsErrBox';
+      d.style.cssText = 'position:fixed;left:0;right:0;bottom:0;z-index:9999;background:#AE2A22;color:#fff;'
+        + 'font:12px/1.6 monospace;padding:10px 14px;white-space:pre-wrap;max-height:40vh;overflow:auto';
+      document.body.appendChild(d);
+      return d;
+    })();
+    box.textContent = '前端报错：' + (e.message || '未知错误')
+      + '\n位置：' + (e.filename || '?') + ':' + (e.lineno || '?') + ':' + (e.colno || '?')
+      + (e.error && e.error.stack ? '\n' + e.error.stack : '');
+  } catch (ignored) { /* 兜底逻辑本身不能再抛 */ }
+});
+window.addEventListener('unhandledrejection', function (e) {
+  var reason = e.reason && (e.reason.stack || e.reason.message || e.reason);
+  window.dispatchEvent(new ErrorEvent('error', { message: 'Promise 未捕获：' + reason }));
+});
+</script>
+<script src="/static/app.js"></script>
+</body>
+</html>

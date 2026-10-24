@@ -1,0 +1,13 @@
+.env
+.venv/
+__pycache__/
+*.py[cod]
+data/
+assets/
+outputs/
+*.db
+*.db-*
+*.sqlite*
+*.log
+*.pem
+*.key

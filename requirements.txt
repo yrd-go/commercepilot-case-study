@@ -1,0 +1,48 @@
+# ---------------------------------------------------------------------------
+# Saviland 电商运营台 —— Python 依赖
+#
+# ★ 本项目**不需要单独建虚拟环境**。
+#   它直接复用 RAG/Agent 底座已有的虚拟环境（Python 3.12）：
+#
+#       %USERPROFILE%\my-agent\.venv-rag\Scripts\python.exe
+#
+#   原因：底座的 Chroma / LangChain / 智谱 embedding 都装在那个环境里，
+#   而本项目要**直接 import 底座的 rag_demo 模块**复用它的混合检索。
+#   在 Python 3.14 下 chromadb 没有预编译 wheel，单独建环境会卡在编译上。
+#   所以：直接用底座的解释器跑，是本项目最稳的部署方式。
+#
+#   运行方式：
+#       <底座venv>\Scripts\python.exe run.py serve     # 打开 http://127.0.0.1:8501
+#       <底座venv>\Scripts\python.exe run.py portfolio
+# ---------------------------------------------------------------------------
+
+# ---- RAG 底座（复用，不是重新实现）----
+langchain
+langchain-community
+langchain-openai
+langchain-text-splitters
+chromadb
+python-dotenv
+
+# ---- Web 后端 ----
+#   前端是手写 HTML/CSS/JS（无构建、无 npm），后端只用 Starlette + Uvicorn。
+#   这两个包底座环境里已经装好，所以**实际不用安装任何新东西**；
+#   这里显式声明，是为了让"从零搭环境"的人也知道需要什么。
+#   刻意没有用 Streamlit —— 版面改不动，做不出能当作品集的观感。
+starlette
+uvicorn
+
+# ---- 图片合成（主图渲染）----
+Pillow
+
+# ---- 报表图表（周报）----
+matplotlib
+
+# ---- Excel 导出（周报明细）----
+openpyxl
+
+# ---- 数据处理（业务分析）----
+pandas
+
+# ---- 接口测试（Starlette TestClient 依赖 httpx）----
+httpx
