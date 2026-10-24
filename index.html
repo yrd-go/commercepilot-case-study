@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CommercePilot · 电商 AI 案例研究</title>
+<meta name="description" content="CommercePilot：独立电商 AI 案例研究。以 Saviland 公开商品与运营场景为参考，展示内容生产、广告诊断与可追溯的业务闭环。">
+<meta name="theme-color" content="#17151a">
+<meta property="og:title" content="CommercePilot · 电商 AI 案例研究">
+<meta property="og:description" content="独立非商业作品集：内容生产 × 投放诊断，展示两条可追溯的电商 AI 工作流。">
+<meta property="og:image" content="images/ui_overview.png">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%238E2F4F'/><text x='50' y='68' font-size='56' font-family='Segoe UI,sans-serif' font-weight='700' fill='%23fff' text-anchor='middle'>C</text></svg>">
+<link rel="stylesheet" href="showcase.css">
+</head>
+<body>
+<a class="skip-link" href="#main">跳到主要内容</a>
+
+<header class="site-header">
+  <a class="brand" href="#top" aria-label="回到顶部">
+    <span class="brand-mark">C</span>
+    <span class="brand-text">COMMERCEPILOT <small>CASE STUDY</small></span>
+  </a>
+  <nav class="site-nav" aria-label="页面导航">
+    <a href="#demo">完整演示</a>
+    <a href="#walkthrough">看什么</a>
+    <a href="#architecture">架构</a>
+    <a href="#evidence">证据</a>
+    <a href="#engineering">取舍</a>
+  </nav>
+  <a class="btn btn-small btn-ghost" data-github href="#" aria-disabled="true" aria-label="打开作品集仓库">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.58 2 12.23c0 4.52 2.87 8.35 6.84 9.71.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.89-2.78.62-3.37-1.21-3.37-1.21-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.36-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.3 9.3 0 0 1 2.5-.34c.85 0 1.71.12 2.5.34 1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.59.69.49A10.25 10.25 0 0 0 22 12.23C22 6.58 17.52 2 12 2Z"/></svg>
+    作品集仓库
+  </a>
+</header>
+
+<main id="main">
+<section class="hero" id="top">
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="hero-copy reveal">
+    <div class="eyebrow"><span></span> INDEPENDENT CASE STUDY / COMMERCE AI</div>
+    <h1>内容生产 × 投放诊断<br><span>做成可运行的系统</span></h1>
+    <p class="hero-lede">
+      以 Saviland 公开商品与运营场景为研究参考，20 个 SKU。从买家端、后台到 RAG
+      与广告诊断，整条链路都能跑通、回灌和追溯。
+    </p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#demo">
+        <span class="play-dot"></span> 观看 完整演示
+      </a>
+      <a class="btn" href="#architecture">看系统架构</a>
+    </div>
+    <p class="hero-note">
+      <strong>独立非商业作品集 · 在线体验为录屏演示。</strong>与 Saviland 无隶属、合作或背书关系；
+      订单与广告为结构对齐的仿真数据，商品与生成图可以逐张追溯。
+    </p>
+  </div>
+
+  <div class="hero-visual reveal" aria-label="运营概览界面截图">
+    <div class="window-frame window-main">
+      <div class="window-bar"><i></i><i></i><i></i><span>COMMERCEPILOT / 运营概览</span></div>
+      <img src="images/ui_overview.png" alt="CommercePilot 案例中的电商运营概览界面">
+    </div>
+    <div class="hero-caption">
+      <span><b>13</b> 条广告诊断</span>
+      <span><b>63</b> 张 AI 主图</span>
+      <span><b>128</b> 项离线测试</span>
+    </div>
+  </div>
+</section>
+<section class="section video-section" id="demo">
+  <div class="section-head reveal">
+    <div>
+      <div class="section-kicker">01 / RECORDED DEMO</div>
+      <h2>3 分 29 秒，完整走完项目</h2>
+    </div>
+    <p>从买家端商品页，到后台运营台、内容生成和广告诊断。没有真人操作，所有画面来自实际运行的项目。</p>
+  </div>
+  <div class="video-shell reveal">
+    <video controls preload="metadata" poster="media/demo-poster.jpg" playsinline>
+      <source src="media/demo.mp4" type="video/mp4">
+      你的浏览器不支持 HTML5 视频。
+    </video>
+  </div>
+  <div class="video-foot reveal">
+    <span>03:29 · 1280 × 720 · H.264</span>
+    <span>录屏演示，非实时在线环境</span>
+    <span>中文字幕已烧录在画面中</span>
+  </div>
+</section>
+
+<section class="section walkthrough" id="walkthrough">
+  <div class="section-head reveal">
+    <div>
+      <div class="section-kicker">02 / WHAT TO LOOK AT</div>
+      <h2>三分钟，按这个顺序看</h2>
+    </div>
+    <p>如果只看结论：这是一个把 AI 接进电商日常工作流、并且主动划清能力边界的项目。</p>
+  </div>
+
+  <article class="case-card reveal">
+    <div class="case-media">
+      <div class="browser-shell"><div class="browser-top"><i></i><i></i><i></i><span>/shop</span></div>
+        <img src="images/shop_home.png" alt="CommercePilot 案例中的买家端商城首页"></div>
+    </div>
+    <div class="case-copy">
+      <div class="case-index">01 / BUYER STOREFRONT</div>
+      <h3>AI 产出不是一份 PPT，直接变成商品页</h3>
+      <p>链路 1 生成的主图、英文标题、五点描述和后台搜索词，直接渲染到独立买家端。改一次提示词或重跑一次链路，页面内容会真实变化。</p>
+      <ul class="check-list">
+        <li>买家端公开，后台登录；两套应用、两套样式、两套数据边界</li>
+        <li>前台字段白名单投影，看不到成本、毛利、广告和库存明细</li>
+        <li>少量商品图取自公开品牌资料，仅用于非商业案例展示；生成图与来源逐张可追溯</li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="case-card reverse reveal">
+    <div class="case-media">
+      <div class="browser-shell"><div class="browser-top"><i></i><i></i><i></i><span>/shop/p/SV-UVL-48W</span></div>
+        <img src="images/shop_detail.png" alt="AI 生成的商品详情页"></div>
+    </div>
+    <div class="case-copy">
+      <div class="case-index">02 / LISTING PIPELINE</div>
+      <h3>RAG → LLM → 合规拦截 → 主图合成</h3>
+      <p>模型负责写得好听，确定性规则负责不出事。生成结果先过禁用词与夸大表述规则，再进入 Pillow 合成三类主图。</p>
+      <div class="mini-metric-row">
+        <div><strong>63</strong><span>张主图</span></div>
+        <div><strong>179</strong><span>条检索命中</span></div>
+        <div><strong>19</strong><span>处违禁词替换</span></div>
+      </div>
+    </div>
+  </article>
+</section>
+<section class="section dark architecture" id="architecture">
+  <div class="section-head reveal">
+    <div>
+      <div class="section-kicker">03 / SYSTEM DESIGN</div>
+      <h2>从数据底座到业务产出</h2>
+    </div>
+    <p>入口层很薄，业务域是纯逻辑，AI 能力可以被替换、降级和追溯。两条链路共用同一套品牌知识、合规规则与运行档案。</p>
+  </div>
+
+  <div class="arch-board reveal">
+    <div class="arch-row arch-row-top">
+      <div class="arch-node node-entry"><small>ENTRY</small><b>Starlette + Uvicorn</b><span>后台 SPA / 买家端多页 / 下载</span></div>
+      <div class="arch-arrow" aria-hidden="true">→</div>
+      <div class="arch-node node-pipe"><small>ORCHESTRATION</small><b>两条业务链路</b><span>Listing · Weekly Report</span></div>
+      <div class="arch-arrow" aria-hidden="true">→</div>
+      <div class="arch-node node-ai"><small>CAPABILITY</small><b>RAG / LLM / Rules</b><span>检索 · 生成 · 诊断 · 渲染</span></div>
+    </div>
+    <div class="arch-down" aria-hidden="true">↓</div>
+    <div class="arch-row arch-row-bottom">
+      <div class="arch-node"><small>DOMAIN</small><b>Catalog · Inventory</b><span>商品、库存、可售天数</span></div>
+      <div class="arch-node"><small>DOMAIN</small><b>Orders · Ads</b><span>订单、毛利、投放事实</span></div>
+      <div class="arch-node"><small>DATA</small><b>SQLite + Chroma</b><span>业务数据与品牌知识</span></div>
+      <div class="arch-node"><small>TRACE</small><b>Run Archive</b><span>引擎、耗时、降级、产物</span></div>
+    </div>
+  </div>
+
+  <div class="flow-grid">
+    <article class="flow-card reveal">
+      <div class="flow-head"><span>CHAIN 01</span><h3>内容生产</h3></div>
+      <ol class="flow-steps">
+        <li><i>01</i><div><b>品牌知识检索</b><span>向量 + 关键词混合检索，命中文件和行号可反查</span></div></li>
+        <li><i>02</i><div><b>结构化生成</b><span>标题、五点、描述、搜索词，JSON 契约与脏数据兜底</span></div></li>
+        <li><i>03</i><div><b>确定性合规</b><span>规则负责拦截，模型负责表达，替换记录留痕</span></div></li>
+        <li><i>04</i><div><b>主图合成</b><span>Pillow 生成 clean / banner / split 三种版式</span></div></li>
+        <li><i>05</i><div><b>进入买家端</b><span>同一份产出直接渲染成可浏览商品页</span></div></li>
+      </ol>
+    </article>
+    <article class="flow-card reveal">
+      <div class="flow-head"><span>CHAIN 02</span><h3>投放诊断</h3></div>
+      <ol class="flow-steps">
+        <li><i>01</i><div><b>统一指标口径</b><span>Spend / Sales / ACOS / ROAS / CTR / CVR</span></div></li>
+        <li><i>02</i><div><b>17 条规则诊断</b><span>只花钱不出单、预算利用率、转化异常、结构问题</span></div></li>
+        <li><i>03</i><div><b>LLM 归因</b><span>把规则证据组织成运营能执行的语言</span></div></li>
+        <li><i>04</i><div><b>多种产物</b><span>5 张图表 + Markdown / HTML / Excel</span></div></li>
+        <li><i>05</i><div><b>回灌链路 1</b><span>根因在内容侧的 SKU 自动送去重写主图与卖点</span></div></li>
+      </ol>
+    </article>
+  </div>
+</section>
+<section class="section evidence" id="evidence">
+  <div class="section-head reveal">
+    <div>
+      <div class="section-kicker">04 / EVIDENCE</div>
+      <h2>结论要能落到数字</h2>
+    </div>
+    <p>示例报告周 2026-W42。金额是快照，口径与结论结构固定；数据保鲜后具体数值可能变化。</p>
+  </div>
+
+  <div class="metric-strip reveal">
+    <div><strong>13<small>条</small></strong><span>本周诊断问题</span><em>5 严重 / 4 预警 / 4 机会</em></div>
+    <div><strong>$823</strong><span>可归因浪费</span><em>按活动与关键词归因</em></div>
+    <div><strong>17<small>条</small></strong><span>确定性诊断规则</span><em>规则可现场改数验证</em></div>
+    <div><strong>128<small>个</small></strong><span>测试用例</span><em>全离线，约 80 秒</em></div>
+  </div>
+
+  <div class="chart-grid">
+    <figure class="chart-card wide reveal">
+      <div class="chart-head"><span>ACOS BY CAMPAIGN</span><b>活动效率分层</b></div>
+      <img src="images/weekly_acos_by_campaign.png" alt="各广告活动 ACOS 对比图" loading="lazy">
+    </figure>
+    <figure class="chart-card reveal">
+      <div class="chart-head"><span>CTR × CVR</span><b>四象限分诊</b></div>
+      <img src="images/weekly_ctr_cvr_quadrant.png" alt="CTR 与 CVR 四象限图" loading="lazy">
+    </figure>
+    <figure class="chart-card reveal">
+      <div class="chart-head"><span>DAILY TREND</span><b>投放趋势</b></div>
+      <img src="images/weekly_daily_trend.png" alt="广告每日趋势图" loading="lazy">
+    </figure>
+  </div>
+
+  <div class="quote-panel reveal">
+    <div class="quote-mark">“</div>
+    <blockquote>周报不是把指标念一遍，而是指出哪个活动在烧钱、证据是什么、下一步交给谁。</blockquote>
+    <p>规则引擎给出确定性问题，LLM 负责把证据组织成可执行的归因；两者职责分开，失败时也不会互相掩盖。</p>
+  </div>
+
+  <div class="gallery-strip reveal">
+    <figure><img src="images/hero_contact_sheet.png" alt="批量生成的主图总览" loading="lazy"><figcaption>20 SKU / 63 张主图</figcaption></figure>
+    <figure><img src="images/ui_listing.png" alt="主图与卖点生成页面" loading="lazy"><figcaption>链路 1 · 运行界面</figcaption></figure>
+    <figure><img src="images/ui_weekly.png" alt="广告周报页面" loading="lazy"><figcaption>链路 2 · 周报界面</figcaption></figure>
+  </div>
+</section>
+
+<section class="section engineering" id="engineering">
+  <div class="section-head reveal">
+    <div>
+      <div class="section-kicker">05 / ENGINEERING JUDGMENT</div>
+      <h2>几个真正影响结果的取舍</h2>
+    </div>
+    <p>不是“用了什么框架”，而是遇到问题时怎么拆、怎么验证、哪里主动不做。</p>
+  </div>
+  <div class="decision-grid">
+    <article class="decision reveal">
+      <span class="decision-no">01</span>
+      <h3>规则兜底，模型负责表达</h3>
+      <p>模型的优化目标和合规要求天然冲突。标题要更有说服力，就可能写出 <code>#1</code>、<code>guaranteed</code> 这类高风险词。所以让规则做确定性拦截，并用“该拦的必拦 / 不该误杀的不能误杀”双向测试钉住。</p>
+    </article>
+    <article class="decision reveal">
+      <span class="decision-no">02</span>
+      <h3>前台和后台是两套应用</h3>
+      <p>“前台不放后台链接”不是安全边界。这里用独立模块、独立样式、字段白名单投影和导入树测试，保证买家端拿不到成本、毛利、广告与库存明细。</p>
+    </article>
+    <article class="decision reveal">
+      <span class="decision-no">03</span>
+      <h3>降级必须留痕，不能假装成功</h3>
+      <p>没有 API Key 时链路会降级为确定性生成器，产物结构仍然完整，但运行档案会明确标记 <code>degraded</code>。失败、中断、僵尸任务都有记录和清理。</p>
+    </article>
+    <article class="decision reveal">
+      <span class="decision-no">04</span>
+      <h3>主动交代数据边界</h3>
+      <p>商品与环境来自真实调研；订单与广告数据是结构对齐的仿真数据。规则逻辑可以用 <code>run.py whatif</code> 现场改数验证，但不会把示例金额包装成真实经营结果。</p>
+    </article>
+  </div>
+</section>
+
+<section class="closing" id="source">
+  <div class="closing-inner reveal">
+    <div class="section-kicker">READY FOR REVIEW</div>
+    <h2>能跑、能看、也能追问实现细节。</h2>
+    <p>推荐路径：先看完录屏，再查看公开仓库中的页面说明、架构取舍与演示素材。业务源码、原始数据、账号与密钥不公开；如需验证实现细节，可另行安排演示。</p>
+    <div class="closing-actions">
+      <a class="btn btn-primary" href="#demo"><span class="play-dot"></span> 再看一遍演示</a>
+      <a class="btn btn-ghost" data-github href="#" aria-disabled="true">作品集仓库</a>
+      <a class="btn btn-ghost" href="images/sample_weekly_report.html" target="_blank" rel="noopener">打开示例周报</a>
+    </div>
+    <div class="closing-meta">
+      <span>CommercePilot Case Study</span><span>Starlette · SQLite · Chroma · Pillow</span><span>2026</span>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <p>CommercePilot · 独立电商 AI 案例研究</p>
+  <p>与 Saviland 无隶属、合作或背书关系；Saviland 名称及相关商标归其权利人所有。商品图仅用于非商业作品展示，订单与广告为仿真数据。公开内容不含源码、账号、用户数据或密钥。</p>
+</footer>
+
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox-close" type="button" aria-label="关闭大图">×</button>
+  <img alt="">
+</div>
+
+<script src="showcase.js"></script>
+</body>
+</html>
+
